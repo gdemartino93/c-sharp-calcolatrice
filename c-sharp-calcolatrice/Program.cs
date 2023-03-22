@@ -29,23 +29,23 @@ class Program
             domanda = Console.ReadLine();
         }
 
-        Console.WriteLine("Che operazione vuoi fare? ('+' / '-' / '*' / '/' ");
+        Console.WriteLine("Che operazione vuoi fare? (+/-/* / '/' ");
         string operatore = Console.ReadLine();
 
         if(operatore == "+") {
-            Console.WriteLine(Somma(numeri));
+            Console.WriteLine($"La Somma dei tuoi numeri è {Somma(numeri)}");
         }
         else if(operatore == "-")
         {
-            Console.WriteLine(Sottrazione(numeri));
+            Console.WriteLine($"La sottrazione dei tuoi numeri è {Sottrazione(numeri)}");
         }
         else if(operatore == "/")
         {
-            Console.WriteLine(Divisione(numeri));
+            Console.WriteLine($"La Divisione dei tuoi numeri è {Divisione(numeri)}");
         }
         else
         {
-            Console.WriteLine(Moltiplicazione(numeri));
+            Console.WriteLine($"La Moltiplicazione dei tuoi numeri è {Moltiplicazione(numeri)}");
         }
 
     }
