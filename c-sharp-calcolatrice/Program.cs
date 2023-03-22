@@ -30,6 +30,15 @@ class Program
         }
 
         Console.WriteLine("Che operazione vuoi fare? ('+' / '-' / '*' / '/' ");
+        string operatore = Console.ReadLine();
+
+        if(operatore == "+") {
+            Console.WriteLine(Somma(numeri));
+        }
+        else if(operatore == "-")
+        {
+            Console.WriteLine(Sottrazione(numeri));
+        }
 
     }
     static int Somma(List<int> numeri)
@@ -40,5 +49,15 @@ class Program
             addizione += i;
         }
         return addizione;
+    }
+
+    static int Sottrazione(List<int> numeri)
+    {
+        int sottrazione = 0 ;
+        foreach(int i in numeri)
+        {
+            sottrazione -= i;
+        }
+        return sottrazione;
     }
 }
