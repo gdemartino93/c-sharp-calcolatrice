@@ -19,17 +19,26 @@ class Program
 
         string domanda = Console.ReadLine(); //chiediamo all'user se vuole inserire altri numeri
 
-
         while (domanda == "y")
         {
             Console.WriteLine("Inserisci altro numero");
             int nuovoNumero = Convert.ToInt32(Console.ReadLine());
-            numeri.Add(nuovoNumero);
+            numeri.Add(nuovoNumero); // pushiamo il nuovo numero all'interno dell'array
+
             Console.WriteLine("Vuoi inserire un altro numero? (y/n)");
             domanda = Console.ReadLine();
         }
 
- 
+        Console.WriteLine("Che operazione vuoi fare? ('+' / '-' / '*' / '/' ");
 
+    }
+    static int Somma(List<int> numeri)
+    {
+        int addizione = 0 ;
+        foreach (int i in numeri)
+        {
+            addizione += i;
+        }
+        return addizione;
     }
 }
