@@ -39,6 +39,10 @@ class Program
         {
             Console.WriteLine(Sottrazione(numeri));
         }
+        else if(operatore == "/")
+        {
+            Console.WriteLine(Divisione(numeri));
+        }
 
     }
     static int Somma(List<int> numeri)
@@ -54,10 +58,20 @@ class Program
     static int Sottrazione(List<int> numeri)
     {
         int sottrazione = numeri[0] ;
-        foreach(int i in numeri)
+        for(int i = 1;i < numeri.Count; i++)
         {
-            sottrazione -= i;
+            sottrazione -= numeri[i] ;
         }
         return sottrazione;
+    }
+
+    static int Divisione(List<int> numeri)
+    {
+        int divisione = numeri[0];
+        for (int i = 1; i < numeri.Count; i++)
+        {
+            divisione /= numeri[i];
+        }
+        return divisione;
     }
 }
