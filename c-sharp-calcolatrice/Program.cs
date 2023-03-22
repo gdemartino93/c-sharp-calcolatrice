@@ -53,7 +53,7 @@ class Program
 
     static int Sottrazione(List<int> numeri)
     {
-        int sottrazione = 0 ;
+        int sottrazione = numeri[0] ;
         foreach(int i in numeri)
         {
             sottrazione -= i;
