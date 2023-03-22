@@ -43,6 +43,10 @@ class Program
         {
             Console.WriteLine(Divisione(numeri));
         }
+        else
+        {
+            Console.WriteLine(Moltiplicazione(numeri));
+        }
 
     }
     static int Somma(List<int> numeri)
@@ -73,5 +77,15 @@ class Program
             divisione /= numeri[i];
         }
         return divisione;
+    }
+
+    static int Moltiplicazione(List <int> numeri)
+    {
+        int moltiplicazione = numeri[0] ;
+        for (int i = 1; i < numeri.Count; i++)
+        {
+            moltiplicazione *= numeri[i] ;
+        }
+        return moltiplicazione;
     }
 }
